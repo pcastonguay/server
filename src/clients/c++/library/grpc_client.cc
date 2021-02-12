@@ -64,7 +64,7 @@ ReadFile(const std::string& filename, std::string& data)
   }
 }
 
-std::pair<std::shared_ptr<grpc::Channel>,std::shared_ptr<inference::GRPCInferenceService::Stub> channel_stub>
+std::pair<std::shared_ptr<grpc::Channel>, std::shared_ptr<inference::GRPCInferenceService::Stub>> 
 GetChannelStub(const std::string& url, bool use_ssl, const SslOptions& ssl_options)
 {
   std::lock_guard<std::mutex> lock(grpc_channel_stub_map_mtx_);
