@@ -1302,7 +1302,7 @@ InferenceServerGrpcClient::InferenceServerGrpcClient(
     : InferenceServerClient(verbose)
 {
   auto channel_stub = GetChannelStub(url,use_ssl,ssl_options); 
-  stub_ = channel_stub.second();
+  stub_ = channel_stub.second;
 }
 
 InferenceServerGrpcClient::~InferenceServerGrpcClient()
